@@ -14,9 +14,10 @@ phases:
       # - command
       # - command
   #pre_build:
-    #commands:
-      # - aws ecr get-login --no-include-email --region us-west-2
-      # - command
+    commands:
+       - echo Logging in to Amazon ECR...
+       - aws --version
+       - $(aws ecr get-login --region us-west-2 --no-include-email)
   build:
     commands:
         - docker build -t 590217768757.dkr.ecr.us-west-2.amazonaws.com/aviva-ecr:latest .
