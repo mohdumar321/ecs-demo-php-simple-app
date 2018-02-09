@@ -13,7 +13,7 @@ phases:
     #commands:
       # - command
       # - command
-  #pre_build:
+  pre_build:
     commands:
        - echo Logging in to Amazon ECR...
        - aws --version
