@@ -1,8 +1,34 @@
 version: 0.2
 
+#env:
+  #variables:
+     # key: "value"
+     # key: "value"
+  #parameter-store:
+     # key: "value"
+     # key: "value"
+
 phases:
+  #install:
+    #commands:
+      # - command
+      # - command
+  #pre_build:
+    #commands:
+      # - command
+      # - command
   build:
     commands:
-      - docker build -t aviva-ecr .
-      - docker tag aviva-ecr:latest 590217768757.dkr.ecr.us-west-2.amazonaws.com/aviva-ecr:latest
-      - docker push 590217768757.dkr.ecr.us-west-2.amazonaws.com/aviva-ecr:latest
+        - docker build -t aviva-ecr:latest 590217768757.dkr.ecr.us-west-2.amazonaws.com/aviva-ecr:latest .
+      # - command
+  post_build:
+    commands:
+        - docker push 590217768757.dkr.ecr.us-west-2.amazonaws.com/aviva-ecr:latest
+      # - command
+#artifacts:
+  #files:
+    # - location
+    # - location
+  #discard-paths: yes
+  #base-directory: location
+
