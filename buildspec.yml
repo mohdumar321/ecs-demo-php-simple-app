@@ -20,7 +20,8 @@ phases:
        - $(aws ecr get-login --region us-west-2 --no-include-email)
   build:
     commands:
-        - docker build -t 590217768757.dkr.ecr.us-west-2.amazonaws.com/aviva-ecr:latest .
+        - docker build -t aviva-ecr .
+        - docker tag aviva-ecr 590217768757.dkr.ecr.us-west-2.amazonaws.com/aviva-ecr:latest
       # - command
   post_build:
     commands:
