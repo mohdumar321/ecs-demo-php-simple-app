@@ -19,7 +19,7 @@ phases:
       # - command
   build:
     commands:
-        - docker build -t aviva-ecr:latest 590217768757.dkr.ecr.us-west-2.amazonaws.com/aviva-ecr:latest .
+        - docker build -t 590217768757.dkr.ecr.us-west-2.amazonaws.com/aviva-ecr:latest .
       # - command
   post_build:
     commands:
