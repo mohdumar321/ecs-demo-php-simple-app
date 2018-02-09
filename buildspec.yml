@@ -13,9 +13,9 @@ phases:
     #commands:
       # - command
       # - command
-  #pre_build:
-    #commands:
-      # - command
+  pre_build:
+    commands:
+        - aws ecr get-login --no-include-email --region us-west-2
       # - command
   build:
     commands:
