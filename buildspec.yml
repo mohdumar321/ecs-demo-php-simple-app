@@ -21,11 +21,11 @@ phases:
   build:
     commands:
         - docker build -t aviva-ecr .
-        - docker tag aviva-ecr 590217768757.dkr.ecr.us-west-2.amazonaws.com/aviva-ecr:latest
+        - docker tag aviva-ecr 590217768757.dkr.ecr.us-west-2.amazonaws.com/aviva-ecr-registry:latest
       # - command
   post_build:
     commands:
-        - docker push 590217768757.dkr.ecr.us-west-2.amazonaws.com/aviva-ecr:latest
+        - docker push 590217768757.dkr.ecr.us-west-2.amazonaws.com/aviva-ecr-registry:latest
       # - command
 #artifacts:
   #files:
